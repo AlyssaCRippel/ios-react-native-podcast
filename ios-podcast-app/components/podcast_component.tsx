@@ -1,24 +1,25 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Pressable } from 'react-native';
 import { Podcast } from '../data/types';
 
 type Props = {
   podcast: Podcast;
+  onPress?: () => void;
 };
 
-export default function Podcast_Component({ podcast }: Props) {
+export default function Podcast_Component({ podcast, onPress }: Props) {
   return (
-    <View className="flex-row items-center mb-5 p-3 rounded-xl bg-blue-100 shadow-md">
+    <Pressable onPress={onPress} className="flex-row items-center mb-5 p-3 rounded-xl bg-gray-800 shadow-md">
       <View className="w-16 h-16 rounded-xl bg-gray-300 justify-center items-center mr-4">
-        <Text className="text-xs text-gray-600">Image</Text>
+        <Text className="text-gray-700 text-1xl">image</Text>
       </View>
       <View className="flex-1">
-        <Text className="text-base font-semibold text-black" numberOfLines={1}>
+        <Text className="text-base font-semibold text-white" numberOfLines={1}>
           {podcast.name}
         </Text>
-        <Text className="text-sm text-gray-500" numberOfLines={2}>
+        <Text className="text-sm text-gray-300" numberOfLines={2}>
           {podcast.description}
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 }

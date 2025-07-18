@@ -13,3 +13,22 @@ export const POPULAR_PODCASTS_QUERY = gql`
     }
   }
 `;
+
+export const createPodcastDetailsQuery = (uuid: string) => gql`
+  {
+    getPodcastSeries(uuid: "${uuid}") {
+      uuid
+      name
+      itunesId
+      description
+      imageUrl
+      totalEpisodesCount
+      episodes {
+        uuid
+        name
+        description
+        audioUrl
+      }
+    }
+  }
+`;

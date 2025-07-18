@@ -6,15 +6,16 @@ type Props = {
     description: string;
     author?: string;
   };
+  onPress?: () => void;
 };
 
-export default function Featured_Podcast_Component({ podcast }: Props) {
+export default function Featured_Podcast_Component({ podcast, onPress }: Props) {
   return (
-    <View className="bg-blue-500 rounded-2xl p-5 mb-6">
-      <Text className="text-sm text-white uppercase">Featured</Text>
-      <Text className="text-xl font-bold text-white mt-1">{podcast.name}</Text>
-      <Text className="text-white mt-1">{podcast.author ?? 'by Unknown Creator'}</Text>
-      <Text className="text-white mt-2" numberOfLines={3}>{podcast.description}</Text>
-    </View>
+    <Pressable onPress={onPress} className="bg-gray-300 rounded-2xl p-5 mb-6">
+      <Text className="text-sm text-gray-800 uppercase">Featured</Text>
+      <Text className="text-xl font-bold text-gray-800 mt-1">{podcast.name}</Text>
+      <Text className="text-gray-700 mt-1">{podcast.author ?? 'by Unknown Creator'}</Text>
+      <Text className="text-gray-700 mt-2" numberOfLines={3}>{podcast.description}</Text>
+    </Pressable>
   );
 }

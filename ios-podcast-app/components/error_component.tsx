@@ -6,10 +6,10 @@ type Props = {
 
 export default function Error_Component({ message }: Props) {
   return (
-    <View className="flex-1 justify-center items-center bg-white px-5">
-      <Text className="text-lg text-red-500 font-semibold">Error loading podcasts</Text>
+    <View className="flex-1 justify-center items-center bg-gray-900 px-5">
+      <Text className="text-lg text-red-400 font-semibold">Error loading podcasts</Text>
       {message && (
-        <Text className="text-sm text-gray-600 mt-2 text-center">
+        <Text className="text-sm text-gray-300 mt-2 text-center">
           {message}
         </Text>
       )}
