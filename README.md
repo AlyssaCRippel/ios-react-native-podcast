@@ -176,7 +176,8 @@ The app uses **NativeWind** for styling, which brings Tailwind CSS to React Nati
 
 ## 📝 Development Notes
 
-- **Code Generation**: ChatGPT was used for styling assistance and bug resolution and readme formatting
+- **Code Generation**: ChatGPT was used for styling assistance and bug resolution
+- **Code Generation**: Used to learn how to test mocked query data in jest **lots of bugs and learning
 - **Environment Setup**: Ensure all environment variables are properly configured
 - **Testing**: Run tests before submitting any changes
 - **TypeScript**: Maintain type safety throughout the codebase
